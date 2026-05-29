@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Helium | Intelligence for the Helium Economy</title>
+    <title>Strategic Helium — The Digital Flagship for the Helium Economy</title>
+    <!-- Google Fonts for luxury feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,173 +13,265 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6fa;
-            color: #1a2a3a;
-            line-height: 1.7;
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F;  /* Deep dark blue */
+            color: #E6EDF5;
+            line-height: 1.6;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 32px;
         }
-        header {
-            background: linear-gradient(135deg, #0a1a2a, #0d2b3e);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            border-bottom: 4px solid #d4af37;
+        /* Gold and lavender accent colors */
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F2D888;
+            --lavender: #C5B4E3;
+            --lavender-dark: #A48CCF;
+            --deep-blue: #0A192F;
+            --blue-card: #112C42;
         }
-        header h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
+        /* Typography */
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
             font-weight: 600;
+            letter-spacing: -0.02em;
         }
-        header p {
-            font-size: 1.2rem;
+        .logo {
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--lavender));
+        }
+        /* Header / Nav */
+        nav {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        /* Hero */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--gold) 40%, var(--lavender) 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 24px;
+        }
+        .hero p {
+            font-size: 1.35rem;
+            max-width: 780px;
+            margin: 0 auto 32px;
             opacity: 0.9;
-            margin-top: 15px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        }
+        .gold-border {
+            width: 100px;
+            height: 2px;
+            background: var(--gold);
+            margin: 32px auto;
+        }
+        /* Cards Grid */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            margin: 70px 0;
         }
         .card {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            margin: 40px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            background: rgba(17, 44, 66, 0.6);
+            backdrop-filter: blur(2px);
+            padding: 32px 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
         }
-        .card h2 {
-            color: #0d2b3e;
-            border-left: 4px solid #d4af37;
-            padding-left: 20px;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
+        .card:hover {
+            border-color: var(--lavender);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
         }
-        .fact-box {
-            background: #eef2f7;
-            border-left: 4px solid #d4af37;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 8px;
-            font-size: 1.1rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        .grid-item {
-            background: #f8f9fc;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-        .grid-item:hover {
-            transform: translateY(-5px);
-        }
-        .grid-item h3 {
-            color: #d4af37;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            border-top: 1px solid #ddd;
-            margin-top: 40px;
-        }
-        .btn {
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             display: inline-block;
-            background: #0d2b3e;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 15px;
-            font-weight: 600;
-            transition: background 0.3s;
         }
-        .btn:hover {
-            background: #d4af37;
-            color: #0d2b3e;
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--gold-light);
+        }
+        .pillars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: space-between;
+            margin: 60px 0;
         }
         .pillar {
-            margin: 20px 0;
-            padding: 15px;
-            background: #f8f9fc;
-            border-radius: 8px;
+            flex: 1;
+            background: var(--blue-card);
+            padding: 28px;
+            border-radius: 20px;
+            border-left: 5px solid var(--lavender);
+        }
+        .pillar h4 {
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .contact-area {
+            text-align: center;
+            background: linear-gradient(145deg, #0E2136, #07111F);
+            padding: 70px 40px;
+            border-radius: 48px;
+            margin: 60px 0;
+            border: 1px solid rgba(197, 180, 227, 0.25);
+        }
+        .contact-email {
+            font-size: 1.8rem;
+            font-family: monospace;
+            background: #07111F;
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 60px;
+            letter-spacing: 1px;
+            color: var(--gold);
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            transition: 0.2s;
+            word-break: break-all;
+        }
+        .contact-email:hover {
+            background: var(--gold);
+            color: #0A192F;
+            border-color: var(--gold);
+        }
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        @media (max-width: 1000px) {
+            .grid-4 { grid-template-columns: repeat(2,1fr); }
+            .hero h1 { font-size: 2.8rem; }
+            .contact-email { font-size: 1.2rem; padding: 12px 20px; }
         }
         @media (max-width: 700px) {
-            header h1 { font-size: 2rem; }
-            .card { padding: 25px; }
+            .grid-4 { grid-template-columns: 1fr; }
+            .pillars { flex-direction: column; }
+            .section-title { font-size: 2rem; }
+            .container { padding: 0 20px; }
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 40px;
+            padding: 6px 18px;
+            font-size: 0.8rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        hr {
+            border-color: rgba(197, 180, 227, 0.2);
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-<header>
     <div class="container">
-        <h1>Strategic Helium</h1>
-        <p>Independent intelligence, analysis, and market insights for the global helium economy</p>
-    </div>
-</header>
-
-<div class="container">
-    <div class="card">
-        <h2>Helium is not just a gas.<br>It is a strategic resource.</h2>
-        <p>Helium is irreplaceable in semiconductor manufacturing, MRI machines, quantum computing, aerospace, nuclear technology, and next‑generation clean energy systems. Global supply is tightening while demand is exploding.</p>
-        
-        <div class="fact-box">
-            <strong>📊 Critical fact:</strong> Qatar produced approximately 63 million cubic meters of helium in 2025 – nearly one‑third of global supply. Recent infrastructure attacks have disrupted a significant portion of this capacity, with repairs expected to take years.
-        </div>
-
-        <p>This platform tracks and analyzes the forces shaping the helium market: from Qatari production to AI chip demand, from medical imaging supply chains to recycling technologies and geopolitical shifts.</p>
+        <nav>
+            <span class="logo">STRATEGIC HELIUM</span>
+        </nav>
     </div>
 
-    <div class="grid">
-        <div class="grid-item">
-            <h3>01</h3>
-            <p>Deep market analysis & price intelligence</p>
-        </div>
-        <div class="grid-item">
-            <h3>02</h3>
-            <p>Geopolitical risk assessments</p>
-        </div>
-        <div class="grid-item">
-            <h3>03</h3>
-            <p>Recycling & technology innovations</p>
-        </div>
-        <div class="grid-item">
-            <h3>04</h3>
-            <p>Future demand from AI & quantum</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Why "Strategic" Matters</h2>
-        <p>The word "strategic" reflects helium's unique position as an irreplaceable input for defense, space exploration, semiconductor fabrication, and life‑saving medical equipment. No other gas combines its lightness, inertness, and ultra‑low boiling point.</p>
-        <p>The helium market is not just a commodity market — it is a geopolitically sensitive, supply‑constrained ecosystem where national security and economic competitiveness converge.</p>
-        <div class="pillar">
-            <strong>🔹 Supply chain leverage</strong> – As helium shortages continue to make headlines, owning a central resource positions you at the heart of one of the most sensitive commodity markets.
-        </div>
-        <div class="pillar">
-            <strong>🔹 Exact‑match authority</strong> – Instant credibility with suppliers, governments, and corporations. The most powerful SEO and branding advantage in the helium sector.
-        </div>
-        <div class="pillar">
-            <strong>🔹 Future‑proof investment</strong> – With the growth of space exploration, quantum technologies, and advanced semiconductors, helium demand is projected to surge dramatically in the coming decades.
-        </div>
-    </div>
-</div>
-
-<footer>
     <div class="container">
-        <p>&copy; 2026 StrategicHelium.com – All rights reserved.</p>
-        <p><small>For inquiries about this domain or collaboration: <a href="mailto:contact@strategichelium.com" style="color:#0d2b3e;">contact@strategichelium.com</a></small></p>
+        <div class="hero">
+            <div class="badge">⚡ PREMIUM EXACT-MATCH DOMAIN</div>
+            <h1>Own the Strategic Asset<br> of the 21st Century</h1>
+            <p>Helium powers semiconductors, MRI machines, space exploration, and quantum computing. This domain is not just a URL — it is the digital headquarters for the industry that enables all others.</p>
+            <div class="gold-border"></div>
+        </div>
+
+        <div class="grid-4">
+            <div class="card">
+                <div class="card-icon">💠</div>
+                <h3>Semiconductors & AI</h3>
+                <p>Critical for cooling lithography machines and AI chips. No viable substitute in advanced nodes.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🩻</div>
+                <h3>Medical & MRI</h3>
+                <p>Liquid helium is essential for superconducting magnets in 50,000+ MRI scanners worldwide.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Aerospace & Defense</h3>
+                <p>Used for purging rocket engines and pressurizing fuel tanks. A strategic commodity.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚛️</div>
+                <h3>Quantum & Clean Energy</h3>
+                <p>Indispensable for quantum computing, fusion research, and next-gen clean technologies.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0 20px;">
+            <h2 class="section-title">Why This Domain</h2>
+            <p style="max-width: 800px; margin: 28px auto 0; font-size: 1.2rem;">In a supply-constrained, geopolitically sensitive market, the brand that owns "Strategic Helium" owns the conversation.</p>
+        </div>
+
+        <div class="pillars">
+            <div class="pillar">
+                <h4>01 — Exact-Match Authority</h4>
+                <p>Instant credibility with suppliers, governments, and corporations. The most powerful SEO and branding advantage in the helium sector.</p>
+            </div>
+            <div class="pillar">
+                <h4>02 — Supply Chain Leverage</h4>
+                <p>As helium shortages continue to make headlines, owning the digital flagship positions you at the heart of a critical commodity market.</p>
+            </div>
+            <div class="pillar">
+                <h4>03 — Future-Proof Investment</h4>
+                <p>Space exploration, quantum technologies, and advanced semiconductors will drive helium demand for decades. This asset appreciates with scarcity.</p>
+            </div>
+        </div>
+
+        <div class="contact-area">
+            <span style="font-size: 0.9rem; letter-spacing: 2px; background: rgba(212,175,55,0.2); padding: 6px 16px; border-radius: 40px;">SERIOUS INQUIRIES ONLY</span>
+            <p style="margin: 28px 0 20px; font-size: 1.2rem;">This strategic asset is held for qualified partners or acquisition at the right valuation. Establish your leadership in the helium economy.</p>
+            <a href="mailto:med.benz.984@gmail.com" class="contact-email">med.benz.984@gmail.com</a>
+            <p style="margin-top: 36px; font-size: 0.85rem; opacity: 0.7;">Direct contact — no intermediaries.</p>
+        </div>
     </div>
-</footer>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Strategic Helium — Independent platform for helium economy intelligence. All rights reserved.</p>
+            <p style="margin-top: 12px;">⚡ The digital flagship for the most critical resource of the high‑tech era</p>
+        </div>
+    </footer>
 </body>
 </html>
