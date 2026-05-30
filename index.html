@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategic Helium — The Digital Flagship for the Helium Economy</title>
-    <!-- Google Fonts for luxury feel -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,7 +13,7 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A192F;  /* Deep dark blue */
+            background-color: #0A192F;
             color: #E6EDF5;
             line-height: 1.6;
         }
@@ -23,7 +22,6 @@
             margin: 0 auto;
             padding: 0 32px;
         }
-        /* Gold and lavender accent colors */
         :root {
             --gold: #D4AF37;
             --gold-light: #F2D888;
@@ -32,7 +30,6 @@
             --deep-blue: #0A192F;
             --blue-card: #112C42;
         }
-        /* Typography */
         h1, h2, h3, .logo {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
@@ -62,18 +59,17 @@
             height: 3px;
             background: linear-gradient(90deg, var(--gold), var(--lavender));
         }
-        /* Header / Nav */
         nav {
             padding: 28px 0;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 20px;
         }
-        /* Hero */
         .hero {
-            padding: 100px 0 80px;
+            padding: 60px 0 60px;
             text-align: center;
         }
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             background: linear-gradient(135deg, #FFFFFF 0%, var(--gold) 40%, var(--lavender) 80%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -81,7 +77,7 @@
             margin-bottom: 24px;
         }
         .hero p {
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             max-width: 780px;
             margin: 0 auto 32px;
             opacity: 0.9;
@@ -92,7 +88,6 @@
             background: var(--gold);
             margin: 32px auto;
         }
-        /* Cards Grid */
         .grid-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -110,7 +105,6 @@
         .card:hover {
             border-color: var(--lavender);
             transform: translateY(-6px);
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
         }
         .card-icon {
             font-size: 2.5rem;
@@ -137,85 +131,17 @@
             border-left: 5px solid var(--lavender);
         }
         .pillar h4 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--gold);
             margin-bottom: 12px;
-        }
-        /* FIXED: contact area - email perfectly centered */
-        .contact-area {
-            text-align: center;
-            background: linear-gradient(145deg, #0E2136, #07111F);
-            padding: 60px 40px;
-            border-radius: 48px;
-            margin: 60px 0;
-            border: 1px solid rgba(197, 180, 227, 0.25);
-        }
-        .contact-email {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: transparent;
-            border: 2px solid var(--gold);
-            padding: 14px 36px;
-            border-radius: 60px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            white-space: nowrap;
-            margin: 0 auto;
-        }
-        .contact-email:hover {
-            background: var(--gold);
-            border-color: var(--gold);
-        }
-        .contact-email:hover .email-text {
-            color: #0A192F;
-        }
-        .contact-email:hover .email-icon {
-            color: #0A192F;
-        }
-        .email-icon {
-            font-size: 1.6rem;
-            color: var(--gold);
-            transition: color 0.3s ease;
-        }
-        .email-text {
-            font-family: 'Inter', monospace;
-            font-size: 1.4rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            color: var(--gold-light);
-            transition: color 0.3s ease;
-        }
-        /* Responsive: keep single line on mobile */
-        @media (max-width: 700px) {
-            .contact-email {
-                padding: 10px 24px;
-                white-space: nowrap;
-            }
-            .email-text {
-                font-size: 1rem;
-            }
-            .email-icon {
-                font-size: 1.2rem;
-            }
         }
         footer {
             padding: 48px 0;
             text-align: center;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 40px;
             font-size: 0.85rem;
-            opacity: 0.7;
-        }
-        @media (max-width: 1000px) {
-            .grid-4 { grid-template-columns: repeat(2,1fr); }
-            .hero h1 { font-size: 2.8rem; }
-        }
-        @media (max-width: 700px) {
-            .grid-4 { grid-template-columns: 1fr; }
-            .pillars { flex-direction: column; }
-            .section-title { font-size: 2rem; }
-            .container { padding: 0 20px; }
+            opacity: 0.8;
         }
         .badge {
             display: inline-block;
@@ -226,17 +152,26 @@
             color: var(--gold);
             margin-bottom: 20px;
         }
+        @media (max-width: 1000px) {
+            .grid-4 { grid-template-columns: repeat(2,1fr); }
+            .hero h1 { font-size: 2.5rem; }
+        }
+        @media (max-width: 700px) {
+            .grid-4 { grid-template-columns: 1fr; }
+            .pillars { flex-direction: column; }
+            .section-title { font-size: 2rem; }
+            .container { padding: 0 20px; }
+            .hero h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav>
-<div style="text-align: center;">
-    <div style="margin-bottom: 15px;">
-        <span class="logo">STRATEGIC HELIUM</span>
-    </div>
-    <a href="story.html" style="color: var(--gold); text-decoration: none; font-weight: 500; border: 1px solid var(--gold); padding: 8px 28px; border-radius: 40px; display: inline-block; transition: 0.3s;">Our Story</a>
-</div>
+        <nav style="text-align: center;">
+            <div style="margin-bottom: 15px;">
+                <span class="logo">STRATEGIC HELIUM</span>
+            </div>
+            <a href="story.html" style="color: var(--gold); text-decoration: none; font-weight: 500; border: 1px solid var(--gold); padding: 8px 28px; border-radius: 40px; display: inline-block; transition: 0.3s;">Our Story</a>
         </nav>
     </div>
 
@@ -291,40 +226,29 @@
             </div>
         </div>
 
-        <!-- MODIFIED: email now perfectly centered horizontally -->
         <!-- CONTACT SECTION - PERFECTLY CENTERED -->
-<div class="contact-area" style="text-align: center; margin: 60px 0; background: linear-gradient(145deg, #0E2136, #07111F); padding: 60px 20px; border-radius: 48px; border: 1px solid rgba(197, 180, 227, 0.25);">
-    <div style="max-width: 700px; margin: 0 auto;">
-        <span style="font-size: 0.9rem; letter-spacing: 2px; background: rgba(212,175,55,0.2); padding: 6px 16px; border-radius: 40px; display: inline-block;">SERIOUS INQUIRIES ONLY</span>
-        <p style="margin: 28px auto 20px; font-size: 1.2rem; max-width: 550px;">This strategic asset is held for qualified partners or acquisition at the right valuation. Establish your leadership in the helium economy.</p>
-        <div style="text-align: center;">
-            <a href="mailto:info@strategichelium.com" style="display: inline-flex; align-items: center; gap: 12px; background: transparent; border: 2px solid #D4AF37; padding: 14px 36px; border-radius: 60px; text-decoration: none; white-space: nowrap; transition: 0.3s;">
-                <span style="font-size: 1.6rem; color: #D4AF37;">✉️</span>
-                <span style="font-family: monospace; font-size: 1.4rem; font-weight: 500; letter-spacing: 1px; color: #F2D888;">info@strategichelium.com</span>
-            </a>
-        </div>
-        <p style="margin-top: 36px; font-size: 0.85rem; opacity: 0.7;">Direct contact — no intermediaries.</p>
-    </div>
-</div>
-            <span style="font-size: 0.9rem; letter-spacing: 2px; background: rgba(212,175,55,0.2); padding: 6px 16px; border-radius: 40px;">SERIOUS INQUIRIES ONLY</span>
-            <p style="margin: 28px 0 20px; font-size: 1.2rem;">This strategic asset is held for qualified partners or acquisition at the right valuation. Establish your leadership in the helium economy.</p>
-            <div style="text-align: center; width: 100%;">
-                <a href="mailto:info@strategichelium.com" class="contact-email">
-                    <span class="email-icon">✉️</span>
-                    <span class="email-text">info@strategichelium.com</span>
-                </a>
+        <div class="contact-area" style="text-align: center; margin: 60px 0; background: linear-gradient(145deg, #0E2136, #07111F); padding: 60px 20px; border-radius: 48px; border: 1px solid rgba(197, 180, 227, 0.25);">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <span style="font-size: 0.9rem; letter-spacing: 2px; background: rgba(212,175,55,0.2); padding: 6px 16px; border-radius: 40px; display: inline-block;">SERIOUS INQUIRIES ONLY</span>
+                <p style="margin: 28px auto 20px; font-size: 1.2rem; max-width: 550px;">This strategic asset is held for qualified partners or acquisition at the right valuation. Establish your leadership in the helium economy.</p>
+                <div style="text-align: center;">
+                    <a href="mailto:info@strategichelium.com" style="display: inline-flex; align-items: center; gap: 12px; background: transparent; border: 2px solid #D4AF37; padding: 14px 36px; border-radius: 60px; text-decoration: none; white-space: nowrap; transition: 0.3s;">
+                        <span style="font-size: 1.6rem; color: #D4AF37;">✉️</span>
+                        <span style="font-family: monospace; font-size: 1.4rem; font-weight: 500; letter-spacing: 1px; color: #F2D888;">info@strategichelium.com</span>
+                    </a>
+                </div>
+                <p style="margin-top: 36px; font-size: 0.85rem; opacity: 0.7;">Direct contact — no intermediaries.</p>
             </div>
-            <p style="margin-top: 36px; font-size: 0.85rem; opacity: 0.7;">Direct contact — no intermediaries.</p>
         </div>
     </div>
 
     <footer>
         <div class="container">
             <p>© 2026 Strategic Helium — Independent platform for helium economy intelligence. All rights reserved.</p>
-<p style="margin-top: 20px;">
-    <a href="story.html" style="color: var(--gold); text-decoration: none; margin: 0 15px;">📖 Our Story</a>
-    <a href="mailto:info@strategichelium.com" style="color: var(--gold); text-decoration: none; margin: 0 15px;">✉️ info@strategichelium.com</a>
-</p>
+            <p style="margin-top: 20px;">
+                <a href="story.html" style="color: var(--gold); text-decoration: none; margin: 0 15px;">📖 Our Story</a>
+                <a href="mailto:info@strategichelium.com" style="color: var(--gold); text-decoration: none; margin: 0 15px;">✉️ info@strategichelium.com</a>
+            </p>
             <p style="margin-top: 12px;">⚡ The digital flagship for the most critical resource of the high‑tech era</p>
         </div>
     </footer>
