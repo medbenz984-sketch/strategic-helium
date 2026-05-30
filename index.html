@@ -141,32 +141,62 @@
             color: var(--gold);
             margin-bottom: 12px;
         }
+        /* NEW: Elegant contact section - single line, no wrapping */
         .contact-area {
             text-align: center;
             background: linear-gradient(145deg, #0E2136, #07111F);
-            padding: 70px 40px;
+            padding: 60px 40px;
             border-radius: 48px;
             margin: 60px 0;
             border: 1px solid rgba(197, 180, 227, 0.25);
         }
         .contact-email {
-            font-size: 1.8rem;
-            font-family: monospace;
-            background: #07111F;
-            display: inline-block;
-            padding: 16px 36px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: transparent;
+            border: 2px solid var(--gold);
+            padding: 14px 36px;
             border-radius: 60px;
-            letter-spacing: 1px;
-            color: var(--gold);
+            transition: all 0.3s ease;
             text-decoration: none;
-            border: 1px solid var(--gold);
-            transition: 0.2s;
-            word-break: break-all;
+            white-space: nowrap;
         }
         .contact-email:hover {
             background: var(--gold);
-            color: #0A192F;
             border-color: var(--gold);
+        }
+        .contact-email:hover .email-text {
+            color: #0A192F;
+        }
+        .contact-email:hover .email-icon {
+            color: #0A192F;
+        }
+        .email-icon {
+            font-size: 1.6rem;
+            color: var(--gold);
+            transition: color 0.3s ease;
+        }
+        .email-text {
+            font-family: 'Inter', monospace;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--gold-light);
+            transition: color 0.3s ease;
+        }
+        /* Responsive: keep single line on mobile too */
+        @media (max-width: 700px) {
+            .contact-email {
+                padding: 10px 24px;
+                white-space: nowrap;
+            }
+            .email-text {
+                font-size: 1rem;
+            }
+            .email-icon {
+                font-size: 1.2rem;
+            }
         }
         footer {
             padding: 48px 0;
@@ -178,7 +208,6 @@
         @media (max-width: 1000px) {
             .grid-4 { grid-template-columns: repeat(2,1fr); }
             .hero h1 { font-size: 2.8rem; }
-            .contact-email { font-size: 1.2rem; padding: 12px 20px; }
         }
         @media (max-width: 700px) {
             .grid-4 { grid-template-columns: 1fr; }
@@ -194,10 +223,6 @@
             font-size: 0.8rem;
             color: var(--gold);
             margin-bottom: 20px;
-        }
-        hr {
-            border-color: rgba(197, 180, 227, 0.2);
-            margin: 20px 0;
         }
     </style>
 </head>
@@ -259,10 +284,14 @@
             </div>
         </div>
 
+        <!-- MODIFIED: One-line email with gold border, no wrapping, using info@strategichelium.com -->
         <div class="contact-area">
             <span style="font-size: 0.9rem; letter-spacing: 2px; background: rgba(212,175,55,0.2); padding: 6px 16px; border-radius: 40px;">SERIOUS INQUIRIES ONLY</span>
             <p style="margin: 28px 0 20px; font-size: 1.2rem;">This strategic asset is held for qualified partners or acquisition at the right valuation. Establish your leadership in the helium economy.</p>
-            <a href="mailto:med.benz.984@gmail.com" class="contact-email">med.benz.984@gmail.com</a>
+            <a href="mailto:info@strategichelium.com" class="contact-email">
+                <span class="email-icon">✉️</span>
+                <span class="email-text">info@strategichelium.com</span>
+            </a>
             <p style="margin-top: 36px; font-size: 0.85rem; opacity: 0.7;">Direct contact — no intermediaries.</p>
         </div>
     </div>
